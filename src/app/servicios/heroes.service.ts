@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class HeroesService {
  private heroes:Heroe[] = [
     {
@@ -61,7 +59,7 @@ export class HeroesService {
     }
 
 
-    getHeroes():Heroe[]{
+    getHeroes(){
         return this.heroes;
     }
 
@@ -75,6 +73,4 @@ export interface Heroe{
     img:string;
     aparicion:string;
     casa:string;
-
-
-}
+};
